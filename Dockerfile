@@ -92,6 +92,7 @@ RUN \
 COPY resources/mlhubspawner /mlhubspawner
 
 RUN \
+   pip install --no-cache --upgrade pip && \
    pip install --no-cache git+https://github.com/jupyterhub/dockerspawner@d1f27e2855d2cefbdb25b29cc069b9ca69d564e3 && \
    pip install --no-cache git+https://github.com/ml-tooling/nativeauthenticator@9859a69dcc9d2ae8d827f192a1580d86f897e9f1 && \
    pip install --no-cache git+https://github.com/jupyterhub/ldapauthenticator@b32a5ea23449edc0519ba4cd86dd0cc0c36896d5 && \
